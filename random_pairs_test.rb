@@ -21,4 +21,11 @@ class Random_pairs_test < Minitest::Test
 		names = ["ji", "ha", "ted", "bill", "hank", "jim", "joe", "dan", "frank", "feller"]
 		assert_equal(5, random_pairs(names))
 	end
+
+	def test_10
+		names = ["ji", "ha", "ted", "bill", "hank", "jim", "joe", "dan", "frank"]
+		assert_equal(4, random_pairs(names))
+	end
+
+
 end	
