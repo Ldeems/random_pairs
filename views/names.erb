@@ -1,0 +1,26 @@
+<h3> howdy, how many people you gonna have today?</h3>
+
+
+
+<form method = "post" action = "names" id = "text_box">
+    <input type ="number" id ="myInput" oninput = "myFunction()" >
+    <p id = "welp"></p>
+    <br>
+    <input type = "submit">
+</form></center>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myInput").value;
+    document.getElementById("welp").innerHTML = "Enter their names in the boxes below:<br>";
+    for (var i = 1; i <= x; i++) {
+        var input = document.createElement("input");
+        input.type = "text";
+        input.name = "text" + i;
+        input.id = "didit";
+        input.required = true;
+        document.getElementById("welp").appendChild(input).value;
+    }
+}
+</script>
+

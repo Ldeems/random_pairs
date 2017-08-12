@@ -1,0 +1,21 @@
+body{
+	background-image: url(/image/death_note.jpg);
+	background-size: 100% 100%;
+
+}
+
+.box{
+	position: center
+}
+
+#frank{
+	position: absolute;
+    top: 25%;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    color: orange;
+    background-image: url(/image/eye.gif);
+    background-size: 100% 100%;
+    font-size: 4vh;
+}
