@@ -7,10 +7,25 @@ get '/' do
 end
 
 post '/names' do
-	info = params[:info]
-	pairs = params.values
-	groups = random_pairs(pairs)
-	#"#{groups} look here fucker"
+	pairs = params[:input]
+	vern = hmm(pairs)
+	fellers = random_pairs(vern)
+	session[:bull] = stringy(fellers)
+	#session[:bull] = params[:bull]
+	#{}"#{session[:bull]}, #{pairs} ,#{vern}look here fucker!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	redirect '/check'
+end	
+
+get '/check' do
+	
+	erb :check, locals:{bull:session[:bull]}
+
+end	
+
+post '/check' do
+	strange = params[:pairsss]
+	groups = backtostring(strange)
+	p "#{groups} loooook heeeeerrrrrreeeee"
 	redirect '/results?groups=' + groups
 end	
 
