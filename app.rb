@@ -8,11 +8,12 @@ end
 
 post '/names' do
 	pairs = params[:input]
+	p "#{pairs} here is your names"
 	vern = hmm(pairs)
 	fellers = random_pairs(vern)
 	session[:bull] = stringy(fellers)
 	#session[:bull] = params[:bull]
-	#{}"#{session[:bull]}, #{pairs} ,#{vern}look here fucker!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	p "#{session[:bull]}look here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 	redirect '/check'
 end	
 

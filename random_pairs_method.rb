@@ -31,7 +31,7 @@ def stringy(pairs)
 	 groups = []
 	 pairs.each do |sets|
 	 	if sets.include? (sets[2])
-	 		groups << "#{sets[0]}, + #{sets[1]}, and #{sets[2]} <br>"
+	 		groups << "#{sets[0]}, #{sets[1]}, and #{sets[2]} <br>"
 	 	else
 	 		groups << "#{sets[0]} and #{sets[1]} <br>"
 	 	end		
